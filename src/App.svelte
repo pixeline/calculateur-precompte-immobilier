@@ -4,6 +4,10 @@
   let rc_amount = 0;
   let tax_reductions = [
     {
+      label: "Aucune réduction",
+      rate: 0.0125
+    },
+    {
       label: "habitation sociale appartenant aux CPAS et aux communes.",
       rate: 0.008
     },
