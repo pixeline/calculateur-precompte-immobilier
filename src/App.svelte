@@ -5,17 +5,17 @@
   let tax_reductions = [
     {
       label: "habitation sociale appartenant aux CPAS et aux communes.",
-      rate: 0.08
+      rate: 0.008
     },
     {
       label:
         "habitation dépendant de la Société Régionale bruxelloise du Logement",
-      rate: 0.08
+      rate: 0.008
     },
     {
       label:
         "habitation dépendant du Fonds du Logement des Familles de la Région de Bruxelles-Capitale",
-      rate: 0.08
+      rate: 0.008
     },
     {
       label:
@@ -85,15 +85,16 @@
       <legend>Réductions possibles</legend>
       {#each tax_reductions as reduction}
         <label>
-          <input name="tax_reductions" type="radio" value={reduction.rate} />
+          <input
+            name="tax_reductions"
+            type="radio"
+            bind:group={tax_rate}
+            value={reduction.rate} />
           {reduction.label}
         </label>
       {/each}
     </fieldset>
-    <label>
-      Commune du bien:
-      <input type="text" />
-    </label>
+
   </div>
 
   <div class="final_result">
