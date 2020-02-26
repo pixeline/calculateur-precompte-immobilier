@@ -93,7 +93,7 @@
 
 <main>
   <h1>
-    Calcule ton Précompte Immobilier
+    Calculez votre Précompte Immobilier
     <br />
     <small>en région de Bruxelles-Capitale</small>
   </h1>
