@@ -51,20 +51,28 @@
   }
   .possible_reductions {
     text-align: left;
+    border: 1px dotted #555;
   }
   h1 {
-    color: #ff3e00;
+    color: #0b3abf;
     text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
+    font-size: 2rem;
+    font-weight: 300;
   }
-
+  h1 small {
+    text-transform: none;
+  }
+  .rc_amount,
   .final_result {
     font-size: 2rem;
     padding: 1rem 2rem;
   }
+  .rc_amount input {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .precompte_amount {
-    border: 2px solid grey;
+    border: 2px dotted grey;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -74,7 +82,8 @@
     padding: 2rem 0;
     font-size: 0.6rem;
   }
-
+  .finger {
+  }
   @media (min-width: 640px) {
     main {
       max-width: none;
@@ -90,8 +99,9 @@
   </h1>
 
   <div>
-    <label>
-      Revenu cadastral indexé* du bien:
+    <label class="rc_amount">
+      Introduisez le revenu cadastral indexé du bien
+      <span class="finger">☞</span>
       <input type="number" name="rc_amount" bind:value={rc_amount} />
       EUR
     </label>
@@ -99,11 +109,7 @@
       <legend>Réductions possibles</legend>
       {#each tax_reductions as reduction}
         <label>
-          <input
-            name="tax_reductions"
-            type="radio"
-            bind:group={tax_rate}
-            value={reduction.rate} />
+          <input type="radio" bind:group={tax_rate} value={reduction.rate} />
           {reduction.label}
         </label>
       {/each}
@@ -112,12 +118,12 @@
   </div>
 
   <div class="final_result">
-    Précompte Immobilier:
+    Le précompte Immobilier à payer sera de
     <span class="precompte_amount">{total_amount}</span>
     EUR
   </div>
   <footer>
     made by
-    <a href="https://pixeline.be">pixeline</a>
+    <a href="https://pixeline.be" target="_blank">pixeline</a>
   </footer>
 </main>
