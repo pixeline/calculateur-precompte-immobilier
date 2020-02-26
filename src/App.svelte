@@ -65,6 +65,12 @@
     padding-right: 1rem;
   }
 
+  footer {
+    border-top: 1px dotted #333;
+    padding: 2rem 0;
+    font-size: 0.6rem;
+  }
+
   @media (min-width: 640px) {
     main {
       max-width: none;
@@ -73,7 +79,11 @@
 </style>
 
 <main>
-  <h1>Calcule ton Précompte Immobilier</h1>
+  <h1>
+    Calcule ton Précompte Immobilier
+    <br />
+    <small>en région de Bruxelles-Capitale</small>
+  </h1>
 
   <div>
     <label>
@@ -102,5 +112,8 @@
     <span class="precompte_amount">{total_amount}</span>
     EUR
   </div>
-
+  <footer>
+    made by
+    <a href="https://pixeline.be">pixeline</a>
+  </footer>
 </main>
