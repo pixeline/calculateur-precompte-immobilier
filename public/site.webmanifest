@@ -1,8 +1,8 @@
 {
     "name": "Calcul du Pr\u00e9compte immobilier",
     "short_name": "Calcul du Pr\u00e9compte immobilier",
-    "icons": [
-        {
+    "start_url": "/?utm=pwa",
+    "icons": [{
             "src": "/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"

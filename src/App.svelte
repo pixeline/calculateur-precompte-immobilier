@@ -103,6 +103,8 @@
     max-width: 240px;
     margin: 0 auto;
     max-width: 996px;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
   .possible_reductions {
     text-align: left;
