@@ -1,6 +1,6 @@
 <script>
   import { roundToTwo, stripHtml, nl2br } from "./helpers.js";
-
+  import MoneyInput from "./MoneyInput.svelte";
   let rc_amount = 0;
   let tax_rates = [
     {
@@ -124,11 +124,7 @@
     font-size: 2rem;
     padding: 1rem 2rem;
   }
-  .rc_amount input {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 12rem;
-  }
+
   .precompte_amount {
     border: 2px dotted grey;
     padding-left: 1rem;
@@ -176,8 +172,7 @@
     <label class="rc_amount">
       Introduisez le revenu cadastral indexé du bien
       <span class="finger">☞</span>
-      <input type="number" name="rc_amount" bind:value={rc_amount} />
-      EUR
+      <MoneyInput bind:value={rc_amount} currency="EUR" />
     </label>
     <div class="row">
       <fieldset class="possible_reductions column">
